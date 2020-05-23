@@ -1,10 +1,10 @@
 package com.app.kotlin.adapter
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.app.kotlin.R
 import com.app.kotlin.utils.BaseActivity
 import kotlinx.android.synthetic.main.adapter_.view.*

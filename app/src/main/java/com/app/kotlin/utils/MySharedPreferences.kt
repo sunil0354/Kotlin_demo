@@ -1,11 +1,17 @@
 package com.app.kotlin.utils
 
 import android.app.Application
-import android.arch.core.BuildConfig
 import android.content.Context
 import android.content.SharedPreferences
+import com.intuit.sdp.BuildConfig
 
 class MySharedPreferences : Application {
+    companion object {
+        private val mySharedPrefrences = ""
+        private var mSharedPreferences: SharedPreferences? = null
+        private var mEditor: SharedPreferences.Editor? = null
+        var mySharedPreferences: MySharedPreferences? = null
+    }
 
     val uuid: String
         get() {
@@ -57,13 +63,6 @@ class MySharedPreferences : Application {
         mEditor = mSharedPreferences!!.edit()
         //        mEditor.remove(ConstantsKey.UUID);
         mEditor!!.apply()
-    }
-
-    companion object {
-        private val mySharedPrefrences = BuildConfig.APPLICATION_ID
-        private var mSharedPreferences: SharedPreferences? = null
-        private var mEditor: SharedPreferences.Editor? = null
-        var mySharedPreferences: MySharedPreferences? = null
     }
 }
 
